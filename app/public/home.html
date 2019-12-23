@@ -10,34 +10,40 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app/public/css/style.css">
     <!-- stylesheets -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>FriendFinder</title>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="jumbotron">
-            <h1>Welcome to FriendFinder!</h1>
+            <span id="ff">FriendFinder</span>
             <hr>
-            <h2 class="homeText">Please answer a short list of questions to find your most compatible match.</h2>
+            <h3 class="homeText">Welcome! Please click the button below to find your most compatible match.</h3>
             <br>
             <div class="">
                 <a href="/survey">
-                    <button type="button" class="survey btn-lg btn-primary">
-                        <i class="far fa-heart"> Click For Survey</i>
+                    <button type="button" class="btn-lg btn-primary" id="survey">
+                        <i class="far fa-heart"> <strong>Click For Survey</strong></i>
                     </button>
                 </a>
             </div>
         </div>
-        <div class="container">
-            <p><a href="https://github.com/weatherfields/FriendFinder" target="_blank" rel="noopener noreferrer"
-                    class=" btn-lg btn-dark">
-                    <i class="fab fa-github"></i> Github
-                </a>___<a href="/api/friends" target="_blank" rel="noopener noreferrer" class="btn-lg btn-dark"><i
-                        class="fas fa-database"></i> API Friends
-                    list</a>
-            </p>
-        </div>
+    </div>
+    <br>
+    <div class="icons">
+        <p>
+            <a href="https://github.com/weatherfields/FriendFinder" target="_blank" rel="noopener noreferrer"
+                class=" btn-lg btn-dark">
+                <i class="fab fa-github"></i> Github
+            </a>___<a href="/api/friends" target="_blank" rel="noopener noreferrer" class="btn-lg btn-dark"><i
+                    class="fas fa-database"></i> API Friends
+                list</a>
+        </p>
+    </div>
 </body>
 
 </html>

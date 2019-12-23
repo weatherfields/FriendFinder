@@ -8,6 +8,6 @@ module.exports = function (app) {
     // api post request
     // when the app has a post route to friends, run function
     app.post("/api/friends", function (req, res) {
-
+        // 
     });
 };
