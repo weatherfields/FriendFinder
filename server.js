@@ -1,6 +1,6 @@
 // Dependencies
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const path = require("path");
 
 
@@ -14,7 +14,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-
+app.use(express.static('app/public/'));
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({
 //     extended: true
@@ -25,7 +25,7 @@ app.use(express.json());
 // })); // sets type
 app.use(express.static('./app/public')); //To serve static files such as images, CSS files, and JavaScript files.
 
-require('./app/routing/htmlRoutes.js')(app)
-require('./app/routing/apiRoutes.js')(app)
+require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 app.listen(poRt, () => console.log(`Server started on port ${poRt}`));

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/app/public/css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- stylesheets -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>FriendFinder</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Used required to make sure the form is completely filled out -->
+        <form action="">
+            <h1 class="form">FriendFinder Survey Questions</h1>
+            <hr>
+            <h3><strong>About You</strong></h3>
+
+            <h4>Your Name</h4>
+            <input type="text" id="name" class="form-control" placeholder="Please input your name" required>
+            <h4>Link to your photo (Required)</h4>
+            <input type="text" id="photo" class="form-control" placeholder="image url goes here" required>
+            <br>
+            <h2>Please fill out the questions below so that we can find your match!</h2>
+            <hr>
+            <h4><strong>1: </strong>I find music to be a very important and stimulating part of my life</h4>
+            <select class="chosen-select" id="q1" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>2: </strong>Eating meat is a great source of protein</h4>
+            <select class="chosen-select" id="q2" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>3: </strong>Excercising and maintaining a healthy, physical appearance is important to me</h4>
+            <select class="chosen-select" id="q3" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>4: </strong>Jealousy is good for a relationship</h4>
+            <select class="chosen-select" id="q4" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>5: </strong>Worrying about future events is productive</h4>
+            <select class="chosen-select" id="q5" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>6: </strong>Fasion is important</h4>
+            <select class="chosen-select" id="q6" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>7: </strong>Donald Trump has an influence on my well being</h4>
+            <select class="chosen-select" id="q7" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>8: </strong>I prefer the mountains over the beach</h4>
+            <select class="chosen-select" id="q8" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>9: </strong>Animals are great and I love having and meeting pets.</h4>
+            <select class="chosen-select" id="q9" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h4><strong>10: </strong>A long term relationship is my ultimate goal from using this site</h4>
+            <select class="chosen-select" id="q10" required>
+                <option value="">Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <hr>
+            <button type="submit" class="btn-lg btn-primary" id="submit-btn"><i class="far fa-heart"></i>
+                Submit</button>
+        </form>
+        <hr>
+
+        <div class="container">
+            <p><a href="https://github.com/weatherfields/FriendFinder" target="_blank" rel="noopener noreferrer"
+                    class=" btn-lg btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>___<a href="/api/friends" target="_blank" rel="noopener noreferrer" class="btn-lg btn-dark"><i
+                        class="fas fa-database"></i> API Friends
+                    list</a>
+            </p>
+        </div>
+    </div>
+    <!-- modal to display match -->
+    <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+        <!-- <div class="modal-dialog" role="document"> -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    x
+                </button>
+                <h2 class="modal-title"><strong> ❤️ Your Match! 🥂</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="your-match"></h2>
+                <img id="your-match-img" style="max-width:100%;
+               height:auto;" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+</body>
+
+</html>
