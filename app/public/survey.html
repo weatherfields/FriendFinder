@@ -183,7 +183,47 @@
                 list</a>
         </p>
     </div>
-
+    <script type="text/javascript">
+        $("#submit-btn").on("click", function () {
+            function validForm() {
+                let validate = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") validate = false;
+                });
+                $(".chosen-select").each(function () {
+                    if ($(this).val() === "") validate = false;
+                });
+                return validate;
+            }
+            if (validForm() == true) {
+                let userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                let currentURL = window.location.origin;
+                $.post(currentURL + "/api/friends", userData, function (data) {
+                    $("#your-match").text(data.name);
+                    $("#your-match-img").attr("src", data.photo);
+                    $("#match-modal").modal("toggle");
+                });
+            } else {
+                alert("Please answer all of the questions before pressing submit.");
+            }
+            return false;
+        });
+    </script>
 </body>
 
 </html>
