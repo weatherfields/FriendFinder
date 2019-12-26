@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="/app/public/css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/app/public/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- stylesheets -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -88,7 +88,7 @@
             </select>
             <br>
             <br>
-            <h4><strong>6: </strong>Fasion is important</h4>
+            <h4><strong>6: </strong>Fashion is important</h4>
             <select class="chosen-select" id="q6" required>
                 <option value="">Select Option</option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -185,6 +185,8 @@
     </div>
     <script type="text/javascript">
         $("#submit-btn").on("click", function () {
+            event.preventDefault();
+
             function validForm() {
                 let validate = true;
                 $(".form-control").each(function () {
@@ -196,7 +198,10 @@
                 return validate;
             }
             if (validForm() == true) {
-                let userData = {
+
+                console.log("value of input name", $("#name").val())
+
+                let userBody = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
                     scores: [
@@ -212,8 +217,11 @@
                         $("#q10").val()
                     ]
                 };
+
+                console.log("data object", userBody);
                 let currentURL = window.location.origin;
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                $.post(currentURL + "/api/friends", userBody, function (data) {
+                    console.log("posting match info", data.name);
                     $("#your-match").text(data.name);
                     $("#your-match-img").attr("src", data.photo);
                     $("#match-modal").modal("toggle");

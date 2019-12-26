@@ -1,6 +1,6 @@
 @font-face {
     font-family: Love;
-    src: url("../../data/fonts/LoveTTF.ttf") format("truetype"), url("../../data/fonts/LoveOTF.otf") format("opentype");
+    src: url("../fonts/LoveTTF.ttf") format("truetype"), url("../fonts/LoveOTF.otf") format("opentype");
 
 }
 
@@ -28,7 +28,7 @@
 
 
 body {
-    background-image: url(../../data/images/hearts.jpg);
+    background-image: url(../images/hearts.jpg);
     background-size: cover;
     /* background-repeat: inherit; */
     background-color: black;
