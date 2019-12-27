@@ -7,9 +7,9 @@ MatchMaker was designed to find the best romantic match based on the end users r
 - Just click on the icon with the heart and you'll be redirected to the survey page.
   ![home](app/public/images/home.png)
 - Then fill out the survey and submit your answers.
-  ![survey](app/public/images/home.png)
+  ![survey](app/public/images/survey.png)
 - A modal will appear displaying your match.
-  ![match](app/public/images/survey.png)
+  ![match]()
 
 ## Technologies Used
 
