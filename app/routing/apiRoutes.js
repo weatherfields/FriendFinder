@@ -1,5 +1,5 @@
 // link route to friend data array ...
-let friends = require("../data/friends.js");
+let friends = require("../data//friends");
 // setup api get request
 // gets data from json
 module.exports = function (app) {
@@ -7,7 +7,7 @@ module.exports = function (app) {
         res.json(friends); // api get request
     });
     // api post request
-    // the function below will run when a userBody submits the form.
+    // the function below will run when a user submits the form.
     // when the app has a post route to friends, run the function
     app.post("/api/friends", function (req, res) {
         // this is where we compare the difference between the new userBodys score and the other's score.
@@ -28,7 +28,7 @@ module.exports = function (app) {
             let currentFriend = object;
             totalDifference = 0;
             // console.log("name", currentFriend.name)
-            // for loop to compare currentfriend scores to the other users
+            // for loop to loop through the currentFriend scores
             for (var i = 0; i < currentFriend.scores.length; i++) {
 
                 let currentFriendScore = currentFriend.scores[i];
