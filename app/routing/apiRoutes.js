@@ -1,5 +1,5 @@
 // link route to friend data array ...
-let friends = require("../data//friends");
+let friends = require("../data/friends");
 // setup api get request
 // gets data from json
 module.exports = function (app) {
