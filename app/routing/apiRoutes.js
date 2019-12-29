@@ -26,7 +26,7 @@ module.exports = function (app) {
         // foreach loop to loop through all of the friends in the database.
         friends.forEach(function (object) {
             let currentFriend = object;
-            totalDifference = 0;
+            let totalDifference = 0;
             // console.log("name", currentFriend.name)
             // for loop to loop through the currentFriend scores
             for (var i = 0; i < currentFriend.scores.length; i++) {
