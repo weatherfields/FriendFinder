@@ -14,11 +14,11 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-// app.use(express.static('app/public'));
+app.use(express.static('app/public'));
 
 //To serve static files such as images, CSS files, and JavaScript files.
 
-require('./app/routing/htmlRoutes.js')(app);
-require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes')(app);
+require('./app/routing/apiRoutes')(app);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

@@ -1,5 +1,6 @@
 // link route to friend data array ...
 let friends = require("../data/friends");
+console.log("these are the friends!");
 // setup api get request
 // gets data from json
 module.exports = function (app) {
@@ -20,15 +21,14 @@ module.exports = function (app) {
 
         let userBody = req.body; // req.body will hold all of the parameters the userBody sends in the POST request
         let userBodyScores = userBody.scores; // will send back the scores parameter on the friends array.
-        let totalDifference; // initialize the totalDifference variable.
 
-        // console.log("req.body", req.body)
+        console.log("req.body", req.body)
         // foreach loop to loop through all of the friends in the database.
         friends.forEach(function (object) {
             let currentFriend = object;
             let totalDifference = 0;
-            // console.log("name", currentFriend.name)
-            // for loop to loop through the currentFriend scores
+            console.log("name", currentFriend.name)
+            //for loop to loop through the currentFriend scores
             for (var i = 0; i < currentFriend.scores.length; i++) {
 
                 let currentFriendScore = currentFriend.scores[i];
@@ -46,6 +46,7 @@ module.exports = function (app) {
         })
         // push the new user to the end of the friends array.
         friends.push(userBody);
+        console.log("friends" + friends[0]);
 
     });
 };

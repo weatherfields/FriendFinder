@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- stylesheets -->
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <title>MatchMaker</title>
 </head>
 
@@ -219,8 +218,7 @@
                 };
 
                 console.log("data object", userBody);
-                let currentURL = window.location.origin;
-                $.post(currentURL + "/api/friends", userBody, function (data) {
+                $.post("/api/friends", userBody, function (data) {
                     console.log("posting match info", data.name);
                     $("#your-match").text(data.name);
                     $("#your-match-img").attr("src", data.photo);
