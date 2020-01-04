@@ -1,59 +1,64 @@
 @font-face {
-    font-family: Love;
-    src: url("../fonts/LoveTTF.ttf") format("truetype"), url("../fonts/LoveOTF.otf") format("opentype");
+  font-family: Love;
+  src: url("../fonts/LoveTTF.ttf") format("truetype"),
+    url("../fonts/LoveOTF.otf") format("opentype");
+}
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 .container-fluid {
-    margin-top: 20px;
-    color: #F9EDD8;
-    text-align: left;
-    background-color: #0C1446;
-    border: 5pt double #F9EDD8;
-    border-radius: 15pt;
+  margin-top: 20px;
+  color: #f9edd8;
+  text-align: left;
+  background-color: #0c1446;
+  border: 5pt double #f9edd8;
+  border-radius: 15pt;
 }
 
 .jumbotron {
-    padding: 2rem 2rem;
-    background-color: #0C1446;
+  padding: 2rem 2rem;
+  background-color: #0c1446;
 }
 
 .icons {
-    padding: .5rem 2.7rem;
+  padding: 0.5rem 2.7rem;
 }
 
 #form-border {
-    padding: 4rem 2rem;
+  padding: 4rem 2rem;
 }
 
-
 body {
-    background-image: url(../images/hearts.jpg);
-    background-size: cover;
-    /* background-repeat: inherit; */
-    background-color: black;
-    /* a */
+  background-image: url(../images/hearts.jpg);
+  background-size: cover;
+  /* background-repeat: inherit; */
+  background-color: black;
+  /* a */
 }
 
 .btn-dark {
-    background-color: #74244d;
-    border-color: #74244d;
-
+  background-color: #74244d;
+  border-color: #74244d;
 }
 
 #survey {
-    color: #fff;
-    background-color: #74244d;
-    border-color: #74244d;
-
+  color: #fff;
+  background-color: #74244d;
+  border-color: #74244d;
 }
 
 #submit-btn {
-    background-color: #74244d;
-    border-color: #74244d;
+  background-color: #74244d;
+  border-color: #74244d;
 }
 
 #ff {
-    font-family: Love;
-    font-size: 5rem;
+  color: #f9edd8;
+  font-family: Love;
+  font-size: 5rem;
 }
