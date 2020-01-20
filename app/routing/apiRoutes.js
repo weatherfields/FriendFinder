@@ -1,11 +1,11 @@
 // link route to friend data array ...
-let friends = require("../data/friends");
-console.log("these are the friends!");
+const myFriends = require("../data/friends");
+// console.log("these are the friends!");
 // setup api get request
 // gets data from json
 module.exports = function (app) {
     app.get("/api/friends", function (req, res) {
-        res.json(friends); // api get request
+        res.json(myFriends); // api get request
     });
     // api post request
     // the function below will run when a user submits the form.
@@ -27,12 +27,11 @@ module.exports = function (app) {
         friends.forEach(function (object) {
             let currentFriend = object;
             let totalDifference = 0;
-            console.log("name", currentFriend.name)
+            // console.log("name", currentFriend.name)
             //for loop to loop through the currentFriend scores
             for (var i = 0; i < currentFriend.scores.length; i++) {
-
                 let currentFriendScore = currentFriend.scores[i];
-                let currentuserBodyScore = userBodyScores.scores[i];
+                let currentuserBodyScore = userBodyScores[i];
 
                 // math.abs will return the absolute value of the number resulted from the equation below.
                 totalDifference += Math.abs(parseInt(currentFriendScore) - parseInt(currentuserBodyScore));
